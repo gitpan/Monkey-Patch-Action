@@ -7,7 +7,7 @@ use warnings;
 use Scalar::Util qw(weaken);
 use Sub::Delete;
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 my %stacks;
 
@@ -64,7 +64,6 @@ sub new {
             goto &{$self->{code}};
         };
         push @$stack, [$type => $code => $wrapper];
-        no warnings; # shut up warning about prototype mismatch
         *$name = $wrapper;
     }
 
@@ -97,7 +96,6 @@ sub DESTROY {
                     if ($stack->[$i-1][0] eq 'delete') {
                         delete_sub $name;
                     } else {
-                        no warnings; # shut up warning about prototype mismatch
                         *$name = $stack->[$i-1][2] // $stack->[$i-1][1];
                     }
                 } else {
@@ -122,7 +120,7 @@ Monkey::Patch::Action::Handle
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =for Pod::Coverage .*
 

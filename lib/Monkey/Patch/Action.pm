@@ -4,7 +4,7 @@ use 5.010;
 use warnings;
 use strict;
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 use Monkey::Patch::Action::Handle;
 
@@ -68,7 +68,7 @@ Monkey::Patch::Action - Wrap/add/replace/delete subs from other package (with re
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
