@@ -3,7 +3,7 @@ NAME
     (with restore)
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
      use Monkey::Patch::Action qw(patch_package);

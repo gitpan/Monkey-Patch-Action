@@ -20,4 +20,4 @@ requires:
 resources:
   homepage: http://metacpan.org/release/Monkey-Patch-Action
   repository: http://github.com/sharyanto/perl-Monkey-Patch-Action
-version: 0.02
+version: 0.03
